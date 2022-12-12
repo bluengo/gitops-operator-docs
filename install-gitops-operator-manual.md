@@ -4,7 +4,17 @@
 ## 1. Gather a GitOps operator Nightly build tag:
 (Jenkins in CPaaS by now)
 
-## 2. Install GitOps operator as SDK:
+## 2. Install GitOps operator as Go package:
+```bash
+# TODO: REVIEW
+[bluengop@fedora ~]$ go install github.com/redhat-developer/gitops-operator@latest
+go: downloading github.com/redhat-developer/gitops-operator v1.5.4
+go: github.com/redhat-developer/gitops-operator@latest (in github.com/redhat-developer/gitops-operator@v1.5.4):
+	The go.mod file for the module providing named packages contains one or
+	more replace directives. It must not contain directives that would cause
+	it to be interpreted differently than if it were the main module.
+
+```
 
 ## 3. Move to source directory:
 ```bash
