@@ -1,0 +1,14 @@
+[bluengop@fedora gitops-operator (master *=)]$ k get all -n gitops-operator-system
+I1212 20:00:17.506919    8970 request.go:668] Waited for 1.198365075s due to client-side throttling, not priority and fairness, request: GET:https://api.rhoms-4.12-121204.dev.openshiftappsvc.org:6443/apis/migration.k8s.io/v1alpha1?timeout=32s
+NAME                                                     READY   STATUS             RESTARTS   AGE
+pod/gitops-operator-controller-manager-df4fc9554-2brlz   1/2     ImagePullBackOff   0          19m
+
+NAME                                                         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+service/gitops-operator-controller-manager-metrics-service   ClusterIP   172.30.63.253   <none>        8443/TCP   19m
+
+NAME                                                 READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/gitops-operator-controller-manager   0/1     1            0           19m
+
+NAME                                                           DESIRED   CURRENT   READY   AGE
+replicaset.apps/gitops-operator-controller-manager-df4fc9554   1         1         0       19m
+
