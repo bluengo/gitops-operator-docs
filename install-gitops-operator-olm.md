@@ -1,5 +1,15 @@
 # Install GitOps Operator using OLM:
 
+The [operator lifecycle manager](https://olm.operatorframework.io/) is the preferred way to install the gitops operator product. It uses a custom `CatalogSource` in OCP marketplace to install our own custom IIB
+
+### Prerequisites:
+
+You will need to set up the below environment variables before proceed:
+| **Variable**     | **Description**                                                       | **Required** | **Default** |
+|------------------|-----------------------------------------------------------------------|--------------|-------------|
+| `IIB_ID`         | 6 digit number. The ID of the operator bundle image to install gitops | **Yes**      | *N/A*       |
+| `QUAY_USER`      | Your [Quay.io](https://quay.io) user (quay account)                   | **Yes**      | *N/A*       |
+| `GITOPS_VERSION` | This is the *Major.Minor* version to be installed                     | No           | `kubeadmin` |
 
 ## 1. Prepare IIB image:
 
